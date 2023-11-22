@@ -17,9 +17,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: "{{defaultContext}}:clang13/."
+          context: "{{defaultContext}}:clang/."
           push: true
-          tags: jackd13/audioplugins:clang13
+          tags: jackd13/audioplugins:clang
 
   BuildGCC:
     runs-on: ubuntu-latest
@@ -35,6 +35,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: "{{defaultContext}}:gcc10/."
+          context: "{{defaultContext}}:gcc/."
           push: true
-          tags: jackd13/audioplugins:gcc10
+          tags: jackd13/audioplugins:gcc
