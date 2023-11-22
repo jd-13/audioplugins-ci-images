@@ -11,7 +11,7 @@ RUN apt-get install -y apt-utils libasound2-dev webkit2gtk-4.0 x11proto-xinerama
 RUN apt-get install -y wget unzip git subversion curl libcurl4-gnutls-dev cppcheck cmake
 
 # Catch
-RUN wget https://github.com/catchorg/Catch2/releases/download/v2.13.0/catch.hpp -P "/home/catch/"
+RUN wget https://github.com/catchorg/Catch2/releases/download/v2.13.9/catch.hpp -P "/home/catch/"
 ENV CATCH_PATH /home/catch/
 
 # GCC
