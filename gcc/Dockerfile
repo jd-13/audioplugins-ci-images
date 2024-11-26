@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 # Prevents "Configuring tzdata" dialog from stalling build
 ENV DEBIAN_FRONTEND=noninteractive

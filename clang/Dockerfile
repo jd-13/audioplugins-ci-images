@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 # Prevents "Configuring tzdata" dialog from stalling build
 ENV DEBIAN_FRONTEND=noninteractive
@@ -17,12 +17,12 @@ ENV CATCH_PATH /home/catch/
 # Clang
 RUN apt-get install -y software-properties-common
 RUN wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
-RUN add-apt-repository -y "deb http://apt.llvm.org/$(lsb_release -c -s)/ llvm-toolchain-$(lsb_release -c -s)-15 main"
+RUN add-apt-repository -y "deb http://apt.llvm.org/$(lsb_release -c -s)/ llvm-toolchain-$(lsb_release -c -s)-17 main"
 RUN apt-get update
-RUN apt-get install -y clang-15 clang-tidy
+RUN apt-get install -y clang-17 clang-tidy
 
 ENV PATH /opt/llvm/bin:$PATH
-ENV CXX clang++-15
+ENV CXX clang++-17
 
 # Valgrind
 RUN apt-get install -y valgrind
