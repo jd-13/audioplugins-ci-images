@@ -7,7 +7,7 @@ CMD bash
 
 # Basics
 RUN apt-get update
-RUN apt-get install -y apt-utils libasound2-dev webkit2gtk-4.0 libwebkit2gtk-4.0-dev x11proto-xinerama-dev
+RUN apt-get install -y apt-utils libasound2-dev x11proto-xinerama-dev
 RUN apt-get install -y wget unzip git subversion curl libcurl4-gnutls-dev cppcheck cmake pkg-config
 
 # Catch
