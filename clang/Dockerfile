@@ -7,7 +7,7 @@ CMD bash
 
 # Basics
 RUN apt-get update
-RUN apt-get install -y apt-utils libasound2-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev libx11-dev libxrandr-dev
+RUN apt-get install -y apt-utils libasound2-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev libx11-dev libxrandr-dev libxcursor-dev
 RUN apt-get install -y wget unzip git subversion curl libcurl4-gnutls-dev cppcheck cmake pkg-config
 
 # Catch
